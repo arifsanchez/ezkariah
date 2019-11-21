@@ -216,6 +216,62 @@ class PermissionsTableSeeder extends Seeder
                 'id'    => '52',
                 'title' => 'masjid_access',
             ],
+            [
+                'id'    => '53',
+                'title' => 'profil_ahli_create',
+            ],
+            [
+                'id'    => '54',
+                'title' => 'profil_ahli_edit',
+            ],
+            [
+                'id'    => '55',
+                'title' => 'profil_ahli_show',
+            ],
+            [
+                'id'    => '56',
+                'title' => 'profil_ahli_delete',
+            ],
+            [
+                'id'    => '57',
+                'title' => 'profil_ahli_access',
+            ],
+            [
+                'id'    => '58',
+                'title' => 'jantina_create',
+            ],
+            [
+                'id'    => '59',
+                'title' => 'jantina_edit',
+            ],
+            [
+                'id'    => '60',
+                'title' => 'jantina_delete',
+            ],
+            [
+                'id'    => '61',
+                'title' => 'jantina_access',
+            ],
+            [
+                'id'    => '62',
+                'title' => 'jenis_pengenalan_diri_create',
+            ],
+            [
+                'id'    => '63',
+                'title' => 'jenis_pengenalan_diri_edit',
+            ],
+            [
+                'id'    => '64',
+                'title' => 'jenis_pengenalan_diri_delete',
+            ],
+            [
+                'id'    => '65',
+                'title' => 'jenis_pengenalan_diri_access',
+            ],
+            [
+                'id'    => '66',
+                'title' => 'master_data_access',
+            ],
         ];
 
         Permission::insert($permissions);

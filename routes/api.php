@@ -28,4 +28,7 @@ Route::group(['prefix' => 'v1', 'as' => 'api.', 'namespace' => 'Api\V1\Admin', '
 
     // Masjids
     Route::apiResource('masjids', 'MasjidApiController');
+
+    // Profil Ahlis
+    Route::apiResource('profil-ahlis', 'ProfilAhliApiController');
 });

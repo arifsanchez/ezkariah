@@ -54,4 +54,18 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     // Masjids
     Route::delete('masjids/destroy', 'MasjidController@massDestroy')->name('masjids.massDestroy');
     Route::resource('masjids', 'MasjidController');
+
+    // Profil Ahlis
+    Route::delete('profil-ahlis/destroy', 'ProfilAhliController@massDestroy')->name('profil-ahlis.massDestroy');
+    Route::post('profil-ahlis/parse-csv-import', 'ProfilAhliController@parseCsvImport')->name('profil-ahlis.parseCsvImport');
+    Route::post('profil-ahlis/process-csv-import', 'ProfilAhliController@processCsvImport')->name('profil-ahlis.processCsvImport');
+    Route::resource('profil-ahlis', 'ProfilAhliController');
+
+    // Jantinas
+    Route::delete('jantinas/destroy', 'JantinaController@massDestroy')->name('jantinas.massDestroy');
+    Route::resource('jantinas', 'JantinaController', ['except' => ['show']]);
+
+    // Jenis Pengenalan Diris
+    Route::delete('jenis-pengenalan-diris/destroy', 'JenisPengenalanDiriController@massDestroy')->name('jenis-pengenalan-diris.massDestroy');
+    Route::resource('jenis-pengenalan-diris', 'JenisPengenalanDiriController', ['except' => ['show']]);
 });

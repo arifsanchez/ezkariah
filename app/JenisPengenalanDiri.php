@@ -3,13 +3,10 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Team extends Model
+class JenisPengenalanDiri extends Model
 {
-    use SoftDeletes;
-
-    public $table = 'teams';
+    public $table = 'jenis_pengenalan_diris';
 
     protected $dates = [
         'created_at',
@@ -18,19 +15,14 @@ class Team extends Model
     ];
 
     protected $fillable = [
-        'name',
+        'nama',
         'created_at',
         'updated_at',
         'deleted_at',
     ];
 
-    public function users()
-    {
-        return $this->hasMany(User::class, 'team_id', 'id');
-    }
-
     public function profilAhlis()
     {
-        return $this->hasMany(ProfilAhli::class, 'team_id', 'id');
+        return $this->hasMany(ProfilAhli::class, 'ictype_id', 'id');
     }
 }
