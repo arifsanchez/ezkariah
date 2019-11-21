@@ -1,11 +1,11 @@
 <?php
 
 return [
-    'userManagement'    => [
+    'userManagement'      => [
         'title'          => 'User management',
         'title_singular' => 'User management',
     ],
-    'permission'        => [
+    'permission'          => [
         'title'          => 'Permissions',
         'title_singular' => 'Permission',
         'fields'         => [
@@ -21,7 +21,7 @@ return [
             'deleted_at_helper' => '',
         ],
     ],
-    'role'              => [
+    'role'                => [
         'title'          => 'Roles',
         'title_singular' => 'Role',
         'fields'         => [
@@ -39,7 +39,7 @@ return [
             'deleted_at_helper'  => '',
         ],
     ],
-    'user'              => [
+    'user'                => [
         'title'          => 'Users',
         'title_singular' => 'User',
         'fields'         => [
@@ -69,7 +69,7 @@ return [
             'team_helper'              => '',
         ],
     ],
-    'team'              => [
+    'team'                => [
         'title'          => 'Teams',
         'title_singular' => 'Team',
         'fields'         => [
@@ -85,7 +85,7 @@ return [
             'name_helper'       => '',
         ],
     ],
-    'userAlert'         => [
+    'userAlert'           => [
         'title'          => 'User Alerts',
         'title_singular' => 'User Alert',
         'fields'         => [
@@ -103,11 +103,11 @@ return [
             'updated_at_helper' => '',
         ],
     ],
-    'contentManagement' => [
+    'contentManagement'   => [
         'title'          => 'Content management',
         'title_singular' => 'Content management',
     ],
-    'contentCategory'   => [
+    'contentCategory'     => [
         'title'          => 'Categories',
         'title_singular' => 'Category',
         'fields'         => [
@@ -125,7 +125,7 @@ return [
             'deleted_at_helper' => '',
         ],
     ],
-    'contentTag'        => [
+    'contentTag'          => [
         'title'          => 'Tags',
         'title_singular' => 'Tag',
         'fields'         => [
@@ -143,7 +143,7 @@ return [
             'deleted_at_helper' => '',
         ],
     ],
-    'contentPage'       => [
+    'contentPage'         => [
         'title'          => 'Pages',
         'title_singular' => 'Page',
         'fields'         => [
@@ -169,11 +169,11 @@ return [
             'deleted_at_helper'     => '',
         ],
     ],
-    'ahliKariah'        => [
+    'ahliKariah'          => [
         'title'          => 'Ahli Kariah',
         'title_singular' => 'Ahli Kariah',
     ],
-    'negeri'            => [
+    'negeri'              => [
         'title'          => 'Negeri',
         'title_singular' => 'Negeri',
         'fields'         => [
@@ -191,7 +191,7 @@ return [
             'deleted_at_helper' => '',
         ],
     ],
-    'masjid'            => [
+    'masjid'              => [
         'title'          => 'Masjid',
         'title_singular' => 'Masjid',
         'fields'         => [
@@ -210,5 +210,65 @@ return [
             'deleted_at'        => 'Deleted at',
             'deleted_at_helper' => '',
         ],
+    ],
+    'profilAhli'          => [
+        'title'          => 'Profil Ahli',
+        'title_singular' => 'Profil Ahli',
+        'fields'         => [
+            'id'                       => 'ID',
+            'id_helper'                => '',
+            'nama_penuh'               => 'Nama Penuh',
+            'nama_penuh_helper'        => 'Nama mengikut kad pengenalan',
+            'no_kad_pengenalan'        => 'No Kad Pengenalan',
+            'no_kad_pengenalan_helper' => '',
+            'created_at'               => 'Created at',
+            'created_at_helper'        => '',
+            'updated_at'               => 'Updated at',
+            'updated_at_helper'        => '',
+            'deleted_at'               => 'Deleted at',
+            'deleted_at_helper'        => '',
+            'team'                     => 'Team',
+            'team_helper'              => '',
+            'ictype'                   => 'Jenis Pengenalan Diri',
+            'ictype_helper'            => '',
+            'jantina'                  => 'Jantina',
+            'jantina_helper'           => '',
+        ],
+    ],
+    'jantina'             => [
+        'title'          => 'Jantina',
+        'title_singular' => 'Jantina',
+        'fields'         => [
+            'id'                => 'ID',
+            'id_helper'         => '',
+            'nama'              => 'Nama',
+            'nama_helper'       => '',
+            'created_at'        => 'Created at',
+            'created_at_helper' => '',
+            'updated_at'        => 'Updated at',
+            'updated_at_helper' => '',
+            'deleted_at'        => 'Deleted at',
+            'deleted_at_helper' => '',
+        ],
+    ],
+    'jenisPengenalanDiri' => [
+        'title'          => 'Jenis Pengenalan Diri',
+        'title_singular' => 'Jenis Pengenalan Diri',
+        'fields'         => [
+            'id'                => 'ID',
+            'id_helper'         => '',
+            'nama'              => 'Nama',
+            'nama_helper'       => '',
+            'created_at'        => 'Created at',
+            'created_at_helper' => '',
+            'updated_at'        => 'Updated at',
+            'updated_at_helper' => '',
+            'deleted_at'        => 'Deleted at',
+            'deleted_at_helper' => '',
+        ],
+    ],
+    'masterData'          => [
+        'title'          => 'Master Data',
+        'title_singular' => 'Master Data',
     ],
 ];

@@ -21,6 +21,69 @@
                         </p>
                     </a>
                 </li>
+                @can('master_data_access')
+                    <li class="nav-item has-treeview {{ request()->is('admin/negeris*') ? 'menu-open' : '' }} {{ request()->is('admin/masjids*') ? 'menu-open' : '' }} {{ request()->is('admin/jantinas*') ? 'menu-open' : '' }} {{ request()->is('admin/jenis-pengenalan-diris*') ? 'menu-open' : '' }}">
+                        <a class="nav-link nav-dropdown-toggle" href="#">
+                            <i class="fa-fw fas fa-cogs">
+
+                            </i>
+                            <p>
+                                <span>{{ trans('cruds.masterData.title') }}</span>
+                                <i class="right fa fa-fw fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            @can('negeri_access')
+                                <li class="nav-item">
+                                    <a href="{{ route("admin.negeris.index") }}" class="nav-link {{ request()->is('admin/negeris') || request()->is('admin/negeris/*') ? 'active' : '' }}">
+                                        <i class="fa-fw fas fa-cogs">
+
+                                        </i>
+                                        <p>
+                                            <span>{{ trans('cruds.negeri.title') }}</span>
+                                        </p>
+                                    </a>
+                                </li>
+                            @endcan
+                            @can('masjid_access')
+                                <li class="nav-item">
+                                    <a href="{{ route("admin.masjids.index") }}" class="nav-link {{ request()->is('admin/masjids') || request()->is('admin/masjids/*') ? 'active' : '' }}">
+                                        <i class="fa-fw fas fa-hospital-alt">
+
+                                        </i>
+                                        <p>
+                                            <span>{{ trans('cruds.masjid.title') }}</span>
+                                        </p>
+                                    </a>
+                                </li>
+                            @endcan
+                            @can('jantina_access')
+                                <li class="nav-item">
+                                    <a href="{{ route("admin.jantinas.index") }}" class="nav-link {{ request()->is('admin/jantinas') || request()->is('admin/jantinas/*') ? 'active' : '' }}">
+                                        <i class="fa-fw fas fa-cogs">
+
+                                        </i>
+                                        <p>
+                                            <span>{{ trans('cruds.jantina.title') }}</span>
+                                        </p>
+                                    </a>
+                                </li>
+                            @endcan
+                            @can('jenis_pengenalan_diri_access')
+                                <li class="nav-item">
+                                    <a href="{{ route("admin.jenis-pengenalan-diris.index") }}" class="nav-link {{ request()->is('admin/jenis-pengenalan-diris') || request()->is('admin/jenis-pengenalan-diris/*') ? 'active' : '' }}">
+                                        <i class="fa-fw fas fa-cogs">
+
+                                        </i>
+                                        <p>
+                                            <span>{{ trans('cruds.jenisPengenalanDiri.title') }}</span>
+                                        </p>
+                                    </a>
+                                </li>
+                            @endcan
+                        </ul>
+                    </li>
+                @endcan
                 @can('user_management_access')
                     <li class="nav-item has-treeview {{ request()->is('admin/permissions*') ? 'menu-open' : '' }} {{ request()->is('admin/roles*') ? 'menu-open' : '' }} {{ request()->is('admin/users*') ? 'menu-open' : '' }} {{ request()->is('admin/teams*') ? 'menu-open' : '' }}">
                         <a class="nav-link nav-dropdown-toggle" href="#">
@@ -148,7 +211,7 @@
                     </li>
                 @endcan
                 @can('ahli_kariah_access')
-                    <li class="nav-item has-treeview {{ request()->is('admin/negeris*') ? 'menu-open' : '' }} {{ request()->is('admin/masjids*') ? 'menu-open' : '' }}">
+                    <li class="nav-item has-treeview {{ request()->is('admin/profil-ahlis*') ? 'menu-open' : '' }}">
                         <a class="nav-link nav-dropdown-toggle" href="#">
                             <i class="fa-fw fas fa-cogs">
 
@@ -159,26 +222,14 @@
                             </p>
                         </a>
                         <ul class="nav nav-treeview">
-                            @can('negeri_access')
+                            @can('profil_ahli_access')
                                 <li class="nav-item">
-                                    <a href="{{ route("admin.negeris.index") }}" class="nav-link {{ request()->is('admin/negeris') || request()->is('admin/negeris/*') ? 'active' : '' }}">
-                                        <i class="fa-fw fas fa-cogs">
+                                    <a href="{{ route("admin.profil-ahlis.index") }}" class="nav-link {{ request()->is('admin/profil-ahlis') || request()->is('admin/profil-ahlis/*') ? 'active' : '' }}">
+                                        <i class="fa-fw fas fa-user-shield">
 
                                         </i>
                                         <p>
-                                            <span>{{ trans('cruds.negeri.title') }}</span>
-                                        </p>
-                                    </a>
-                                </li>
-                            @endcan
-                            @can('masjid_access')
-                                <li class="nav-item">
-                                    <a href="{{ route("admin.masjids.index") }}" class="nav-link {{ request()->is('admin/masjids') || request()->is('admin/masjids/*') ? 'active' : '' }}">
-                                        <i class="fa-fw fas fa-hospital-alt">
-
-                                        </i>
-                                        <p>
-                                            <span>{{ trans('cruds.masjid.title') }}</span>
+                                            <span>{{ trans('cruds.profilAhli.title') }}</span>
                                         </p>
                                     </a>
                                 </li>
